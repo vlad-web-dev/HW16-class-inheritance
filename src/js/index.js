@@ -12,9 +12,6 @@ class Clock {
 }
 
 class FullTime extends Clock{
-    constructor(element) {
-        super(element)
-    }
     render() {
         let date = new Date()
         let hours = correctValueTime(date.getHours())
@@ -25,9 +22,6 @@ class FullTime extends Clock{
 }
 
 class ShortTime extends Clock {
-    constructor(element) {
-        super(element)
-    }
     render() {
         let date = new Date()
         let hours = correctValueTime(date.getHours())
