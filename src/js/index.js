@@ -32,15 +32,17 @@ class ShortTime extends Clock {
 
 let time = document.getElementById('time')
 let clock = new Clock(time);
+let shortClock = new ShortTime(time);
+let fullClock = new FullTime(time);
 setInterval(() => clock.render(), 1000);
 time.addEventListener('click', function (){
     changeFormat()
 })
 function changeFormat() {
     if (clock instanceof FullTime) {
-        clock = new ShortTime(time)
+        clock = shortClock
     } else {
-        clock = new FullTime(time)
+        clock = fullClock
     }
     clock.render()
 }
